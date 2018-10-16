@@ -20,7 +20,7 @@ class Vector {
 class Boune {
     constructor(canvas , x, y , R ){
             this.context = canvas.getContext('2d')
-            this.R = 30
+            // this.R = 30
             this.pos  = new Vector(x, y)
             this.R = R
             this.canvas = canvas
@@ -49,7 +49,7 @@ class Boune {
     }
     accelerationEarth() {
         let acc = 0
-        console.log('Y' , this.pos.y)
+        // console.log('Y' , this.pos.y)
         if(this.pos.y > 0  ) {
             acc = 2
         }
@@ -147,14 +147,14 @@ class ControlGame {
                 const { d, r , pos : {x , y}}  = item
                 // console.log( yBounce  , d , x)
                 if(y === 0) {
-                    if(yBounce  < d && x < xBounce) {
+                    if(yBounce  < d && x < xBounce && xBounce <(x +r)) {
                         console.log('game over 0')
                     }
                 }
                 // console.log(y)
                 if(y !==0){
-                    if(yBounce > y && x < xBounce){
-                       console.log(yBounce , y)
+                    if(yBounce > y && x < xBounce && xBounce <(x +r)){
+                       console.log('game over 1')
                     }
                 }
             })
