@@ -151,16 +151,17 @@ class ControlGame {
                         console.log('game over 0')
                     }
                 }
+                // console.log(y)
                 if(y !==0){
-                    if(yBounce > (700 - d) && x < xBounce){
-                        console.log('game over 1')
+                    if(yBounce > y && x < xBounce){
+                       console.log(yBounce , y)
                     }
                 }
             })
         }
         animateAllColumn() {
             this.columns.map(item => {
-                item.pos.add(new Vector(-10 , 0 ))
+                item.pos.add(new Vector(-4 , 0 ))
                 item.render()
             })
         }
